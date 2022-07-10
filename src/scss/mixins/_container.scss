@@ -1,0 +1,10 @@
+@mixin container($background-color) {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1520px;
+  height: auto;
+  margin-top: 70px;
+  background-color: $background-color;
+}

@@ -1,0 +1,316 @@
+.popular-items-container__fluid {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: $mainBackground;
+
+
+  .popular-items-container-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1520px;
+    height: auto;
+    margin-top: 50px;
+    padding-bottom: 20px;
+
+    @include small-tablet {
+      margin-top: 25px;
+      padding-bottom: 10px;
+    }
+
+    .popular-items-headline {
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1520px;
+      min-height: 82px;
+
+
+      .popular-items-title {
+        padding-left: 20px;
+
+        @media (max-width: (558px)) {
+          padding: 10px 0 10px 8px;
+        }
+
+        h3 {
+          position: relative;
+          font-family: GilroyBold, serif;
+          font-size: 48px;
+          color: $darkTextColor;
+          margin: 0;
+
+          @include tablet {
+            font-size: 45px;
+          }
+
+          @media (max-width: (850px)) {
+            font-size: 40px;
+          }
+
+          @include small-tablet {
+            font-size: 36px;
+          }
+
+          @media (max-width: (600px)) {
+            font-size: 32px;
+          }
+
+          @include mobile {
+            font-size: 28px;
+          }
+
+          @media (max-width: (438px)) {
+            font-size: 25px;
+          }
+
+          &::after {
+            content: url("../img/star.png");
+            position: absolute;
+            top: -13px;
+            right: 15px;
+
+            @include tablet {
+              right: 47px;
+            }
+
+            @media (max-width: (850px)) {
+              right: 88px;
+            }
+
+            @include small-tablet {
+              right: 130px;
+            }
+
+            @include mobile {
+              right: 20%;
+            }
+
+            @media (max-width: (368px)) {
+              right: 10%;
+            }
+          }
+        }
+
+        p {
+          font-family: Gilroy-Regular, serif;
+          font-size: 18px;
+          margin: 0;
+
+          @include mobile {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .all-items-collection {
+        display: block;
+        position: relative;
+        font-family: Gilroy-Regular, serif;
+        font-size: 18px;
+        margin: 0 66px 0 0;
+        color: $darkTextColor;
+
+        @include small-tablet {
+          display: none;
+        }
+
+        &:hover {
+          color: $greenBtnActive;
+        }
+
+        &::after {
+          content: url("../img/all-items-arrow.png");
+          position: absolute;
+          right: -45px;
+          top: -1px;
+
+
+          &::after:hover {
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+
+    .popular-items-box {
+
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1500px;
+      margin-top: 30px;
+
+      @include mobile {
+        flex-wrap: wrap;
+      }
+
+      .cart-container {
+        display: none;
+        position: fixed;
+        background-color: transparent;
+        width: 100%;
+        max-width: 100px;
+        min-height: 120px;
+        z-index: 2;
+        right: 0;
+
+
+
+        &-background {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          width: 100%;
+          max-width: 100px;
+          min-height: 100px;
+          border-radius: 50%;
+          background: rgba(31, 171, 138, 36%);
+
+          &::after {
+            content: '';
+            position: absolute;
+            background: $whiteFont;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            top: 16px;
+            right: 16px;
+          }
+
+          .cart-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            width: 100%;
+            max-width: 70px;
+            min-height: 70px;
+            background: $greenBtnNormal;
+          }
+        }
+
+        .cart-index {
+          font-family: Gilroy-Medium, serif;
+          font-size: 17px;
+          text-align: center;
+          margin-top: 3px;
+        }
+      }
+
+      .popular-item-major {
+        display: flex;
+        margin-right: 5px;
+        margin-left: 10px;
+
+        @include mobile {
+          margin: 0 10px;
+        }
+
+
+        .popular-item-shoppers {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .popular-items-minor {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 5px;
+        margin-right: 10px;
+
+
+        @include mobile {
+          margin: 5px 10px 0 10px;
+        }
+
+        .popular-item-minor__big {
+          display: flex;
+
+          .popular-item-cups {
+            display: block;
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        .popular-item-minor__little {
+          display: flex;
+          justify-content: space-between;
+
+          @include mobile {
+            margin-top: 5px;
+          }
+
+          .popular-item-mugs {
+            display: flex;
+            width: 49%;
+            height: auto;
+          }
+
+          .popular-item-t-shirts {
+            display: flex;
+            width: 49%;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    .popular-item-shoppers-link {
+      display: block;
+      font-family: Gilroy-SemiBold, serif;
+      font-size: 24px;
+      color: $darkTextColor;
+      margin-top: 20px;
+      text-align: center;
+
+      &:hover {
+        color: $greenBtnActive;
+      }
+
+      @include small-tablet {
+        margin-top: 10px;
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+
+    .all-items-collection__mini-screen {
+      display: none;
+
+      @include mobile {
+        display: block;
+        position: relative;
+        font-family: Gilroy-Regular, serif;
+        font-size: 16px;
+        margin-top: 10px;
+        color: $darkTextColor;
+
+        &:hover {
+          color: $greenBtnActive;
+        }
+
+        &::after {
+          content: url("../img/all-items-arrow.png");
+          position: absolute;
+          right: -45px;
+          top: -1px;
+        }
+      }
+    }
+  }
+}
+
+

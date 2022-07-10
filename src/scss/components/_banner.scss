@@ -1,0 +1,579 @@
+.banner-container-content {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1520px;
+  min-height: 608px;
+  padding: 0;
+
+  @media (max-width: (1300px)) {
+    min-height: 508px;
+  }
+
+  @media (max-width: (1100px)) {
+    min-height: 429px;
+  }
+
+  @include tablet {
+    min-height: 398px;
+    margin-top: 20px;
+  }
+
+  @media (max-width: (818px)) {
+    min-height: 370px;
+  }
+
+  //@include small-tablet {
+  //  margin-top: 78px;
+  //}
+
+  @include small-tablet {
+    min-height: 351px;
+  }
+
+  @media (max-width: (574px)) {
+    min-height: 314px;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    margin-top: 0;
+    padding-top: 23px;
+
+  }
+
+  .banner-container-info {
+    //width: 100%;
+    max-width: 711px;
+    min-height: 415px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding-left: 15px;
+    margin-right: 10px;
+
+
+    @media (max-width: (1271px)) {
+      max-width: 750px;
+      z-index: 2;
+      min-height: 508px;
+    }
+
+    @media (max-width: (1100px)) {
+      min-height: 429px;
+    }
+
+    @include tablet {
+      min-height: 391px;
+    }
+
+    @media (max-width: (818px)) {
+      min-height: 370px;
+    }
+
+    @include small-tablet {
+      max-width: 380px;
+      min-height: 351px;
+    }
+
+    @media (max-width: (574px)) {
+      max-width: 317px;
+      min-height: 351px;
+    }
+
+    @media (max-width: (574px)) {
+      min-height: 314px;
+    }
+
+    @include mobile {
+      align-self: flex-start;
+      margin: 0;
+      padding-left: 10px;
+      min-height: 190px;
+    }
+
+    .banner-slogan {
+      font-family: Gilroy-Black, serif;
+      font-size: 48px;
+      color: $darkTextColor;
+      margin: 0 0 10px 0;
+
+      @media (max-width: (1271px)) {
+        margin: 32px 0 33px 0;;
+      }
+
+      @media (max-width: (1100px)) {
+        margin: 20px 0 10px 0;
+      }
+
+      @include tablet {
+        font-size: 46px;
+        margin-top: 0;
+      }
+
+      @include small-tablet {
+        font-size: 35px;
+      }
+
+      @media (max-width: (574px)) {
+        font-size: 32px;
+      }
+    }
+
+    .banner-text {
+      font-family: Gilroy-Regular, serif;
+      font-size: 18px;
+      color: $darkTextColor;
+      margin: 0 0 58px 0;
+
+      @media (max-width: (1100px)) {
+        margin-bottom: 26px;
+      }
+
+      @include tablet {
+        font-size: 17px;
+        margin-bottom: 15px;
+      }
+
+      @include small-tablet {
+        font-size: 15px;
+      }
+
+      @media (max-width: (574px)) {
+        font-size: 13px;
+      }
+    }
+
+    .banner-features-box {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 711px;
+      min-height: 160px;
+
+      @media (max-width: (1271px)) {
+        max-width: 633px;
+        justify-content: flex-start;
+        min-height: 200px;
+      }
+
+      @media (max-width: (1100px)) {
+        max-width: 526px;
+      }
+
+      @include tablet {
+        max-width: 368px;
+      }
+
+      @include small-tablet {
+        display: none;
+      }
+
+      .feature-item {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        max-width: 194px;
+        min-height: 160px;
+
+        @media (max-width: (1175px)) {
+          max-width: 170px;
+          min-height: 190px;
+        }
+
+        @media (max-width: (1100px)) {
+          max-width: 148px;
+          min-height: 170px;
+        }
+
+        @include tablet {
+          max-width: 112px;
+        }
+
+        &:first-child, &:nth-child(2) {
+          @media (max-width: 1324px) {
+            margin-right: 15px;
+          }
+
+          @media (max-width: 818px) {
+            margin-right: 9px;
+          }
+        }
+
+
+        .feature-item-background {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          max-width: 85px;
+          min-height: 85px;
+          background: $pinkBanner;
+          border-radius: 50%;
+          margin-bottom: 21px;
+
+          @include tablet {
+            max-width: 74px;
+            min-height: 74px;
+          }
+
+          &::before {
+            position: absolute;
+            content: url("../img/Scribble-left.png");
+            left: -8px;
+            top: 64px;
+
+            @include tablet {
+              left: -9px;
+              top: 55px;
+            }
+
+            //@include mobile {
+            //  max-width: 58px;
+            //  min-height: 58px;
+            //}
+          }
+
+          &::after {
+            position: absolute;
+            content: url("../img/Scribble-right.png");
+            left: 77px;
+            top: -2px;
+
+            @include tablet {
+              left: 67px;
+            }
+          }
+
+          .feature-item-icon {
+            max-width: 45px;
+            min-height: 45px;
+
+            @include tablet {
+              max-width: 40px;
+              min-height: 40px;
+            }
+          }
+        }
+
+        .feature-item-text {
+          font-family: Gilroy-Regular, serif;
+          font-size: 18px;
+          text-align: center;
+
+          @include tablet {
+            font-size: 16px;
+          }
+
+          @media (max-width: 818px) {
+            font-size: 14px;
+          }
+
+          & > span {
+            font-family: 'Gilroy-ExtraBold', serif;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+
+    //Дизайн блока при разрешении экрана 768
+    .sale-box__mobile {
+      display: none;
+
+      @include small-tablet {
+        display: block;
+        width: 100%;
+        max-width: 351px;
+        min-height: 112px;
+        position: relative;
+      }
+
+      @media (max-width: (574px)) {
+        max-width: 351px;
+        min-height: 112px;
+      }
+
+      @include mobile {
+        display: none;
+      }
+
+      .sale-box-title__mobile {
+        font-family: Gilroy-ExtraBold, serif;
+        font-size: 20px;
+        text-align: center;
+        margin: 0;
+        text-transform: uppercase;
+
+        @media (max-width: (690px)) {
+          text-align: left;
+          font-size: 18px;
+        }
+
+        @media (max-width: (574px)) {
+          font-size: 14px;
+        }
+      }
+
+      .sale-box-wrapper__mobile {
+        width: 100%;
+        max-width: 351px;
+        min-height: 100px;
+        background-image: url("../img/sale-product.png");
+        background-repeat: no-repeat;
+        position: absolute;
+        left: -37px;
+
+        @media (max-width: (690px)) {
+          left: -92px;
+        }
+
+        @media (max-width: (634px)) {
+          max-width: 287px;
+          min-height: 98px;
+        }
+
+        @media (max-width: (574px)) {
+          max-width: 276px;
+          min-height: 88px;
+          left: -120px;
+        }
+      }
+    }
+
+
+  }
+
+  .banner-container-poster {
+    display: flex;
+    align-self: flex-end;
+    max-width: 712px;
+    margin-left: 20px;
+
+    @media (max-width: (1271px)) {
+      position: absolute;
+      right: 0;
+      z-index: 1;
+    }
+
+    .banner-poster {
+      width: 100%;
+      max-width: 720px;
+      //height: 610px;
+
+      @media (max-width: (1400px)) {
+        height: 505px;
+        width: 651px;
+      }
+
+      @media (max-width: (1271px)) {
+        height: 505px;
+        width: 570px;
+      }
+
+      @media (max-width: (1100px)) {
+        height: 429px;
+        width: 555px;
+      }
+
+      @include tablet {
+        height: 386px;
+        width: 482px;
+      }
+
+      @media (max-width: (818px)) {
+        height: 362px;
+        width: 438px;
+      }
+
+      @include small-tablet {
+        height: 345px;
+        width: 410px;
+        z-index: 1;
+      }
+
+      @media (max-width: (574px)) {
+        height: 304px;
+        width: 323px;
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  .banner-box__mini-mobile {
+    display: none;
+
+
+    @include mobile {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+    }
+
+    .banner-box-wrapper__mini-mobile {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+
+
+      .banner-poster__mini-mobile {
+        width: 100%;
+        max-width: 290px;
+        min-height: 387px;
+
+        @media (max-width: (375px)) {
+          width: 100%;
+          max-width: 260px;
+          min-height: 350px;
+        }
+      }
+    }
+
+    .banner-features-box__mini-mobile {
+      display: none;
+      padding: 0 0 0 5px;
+
+      @include mobile {
+        display: flex;
+        //padding-left: 15px;
+        max-width: 80px;
+        background: transparent;
+      }
+    }
+  }
+}
+
+//Дизайн при размере экрана 480
+
+.banner-features-box__mobile {
+  width: 100%;
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 250px;
+  background: $whiteFont;
+
+  @include small-tablet {
+    display: flex;
+    align-items: flex-end;
+    min-height: 187px;
+  }
+
+  @include mobile {
+    display: none;
+  }
+
+  //@include mobile {
+  //  top: 38%;
+  //  right: 63%;
+  //  position: absolute;
+  //}
+
+  //  @media (max-width: (401px)) {
+  //  top: 35%;
+  //  right: 55%;
+  //}
+
+  .feature-item__mobile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 157px;
+    min-height: 160px;
+
+
+    @include mobile {
+      max-width: 90px;
+      min-height: 80px;
+
+    }
+
+    &:first-child, &:nth-child(2) {
+      margin-right: 15px;
+
+      @include mobile {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+
+    .feature-item-background__mobile {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 72px;
+      min-height: 72px;
+      background: $pinkBanner;
+      border-radius: 50%;
+      margin-bottom: 21px;
+
+      @include mobile {
+        max-width: 50px;
+        min-height: 50px;
+        margin-bottom: 5%;
+      }
+
+
+      &::before {
+        position: absolute;
+        content: url("../img/Scribble-left.png");
+        left: -11px;
+        top: 50px;
+
+        @include mobile {
+          display: none;
+        }
+      }
+
+      &::after {
+        position: absolute;
+        content: url("../img/Scribble-right.png");
+        left: 65px;
+        top: -2px;
+
+        @include mobile {
+          display: none;
+        }
+      }
+
+      .feature-item-icon__mobile {
+        width: 40px;
+        height: 40px;
+
+        @include mobile {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+
+    .feature-item-text__mobile {
+      font-family: Gilroy-Regular, serif;
+      font-size: 15px;
+      text-align: center;
+
+      @include mobile {
+        font-size: 13px;
+      }
+
+      & > span {
+        font-family: 'Gilroy-ExtraBold', serif;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  @include mobile {
+    flex-direction: column;
+    max-width: 180px;
+    min-height: 300px;
+  }
+}

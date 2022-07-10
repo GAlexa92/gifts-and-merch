@@ -1,0 +1,15 @@
+body {
+  width: 100%;
+  background-color: $mainBackground;
+
+  .gradient__container_main {
+    width: 100%;
+    //max-width: 1919px;
+    //min-height: 862px;
+    //background: url("../img/main-background.png") no-repeat;
+    background: $purpleBgcGradient;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

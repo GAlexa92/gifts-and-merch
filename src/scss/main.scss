@@ -1,0 +1,16 @@
+// Подключаем стили сброса и тд
+@import "./vendor/normalize";
+
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/navigation";
+@import "./components/banner";
+@import "./components/popular-items";
+@import "./components/creative-block";
+
